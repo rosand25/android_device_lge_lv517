@@ -23,8 +23,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, device/lge/lv517/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
-$(call inherit-product, vendor/cm/config/telephony.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/telephony.mk)
 
 # Set those variables here to overwrite the inherited values.
 BOARD_VENDOR := lge
@@ -34,11 +34,11 @@ PRODUCT_BRAND := lge
 PRODUCT_MODEL := LG K20 Plus
 PRODUCT_MANUFACTURER := lge
 
-# Overlays (inherit after vendor/cm to ensure we override it)
+# Overlays (inherit after vendor/lineage to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 PRODUCT_GMS_CLIENTID_BASE := android-lge
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT="T-Mobile/lv517_tmo_us/lv517:7.1.2/NRD90U/171071514d722:user/release-keys" \
-    PRIVATE_BUILD_DESC="lv517_tmo_us-user 7.1.2 NRD90U 171071514d722 release-keys"
+#PRODUCT_BUILD_PROP_OVERRIDES += \
+#    BUILD_FINGERPRINT="T-Mobile/lv517_tmo_us/lv517:8.1.0/NRD90U/171071514d722:user/release-keys" \
+#    PRIVATE_BUILD_DESC="lv517_tmo_us-user 8.1.0 NRD90U 171071514d722 release-keys"
